@@ -23,7 +23,7 @@ public class Main {
 
                 break;
             case 2:
-                System.out.println("Ingrese la farenheis ");
+                System.out.println("Ingrese los centigrados ");
                 double centigrado = scanner.nextDouble();
 
                  farenhei = (centigrado * 9/5)+32;
