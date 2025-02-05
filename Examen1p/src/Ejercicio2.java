@@ -7,32 +7,26 @@ public class Ejercicio2 {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Ingrese la primer frase ");
-        String frase1 = scanner.next().strip();
+        
+        System.out.println("Ingrese la primera palabra:");
+        String palabra1 = scanner.nextLine();
 
-        System.out.println("Ingrese la primer frase ");
-        String frase2 = scanner.next().strip();
+        System.out.println("Ingrese la segunda palabra:");
+        String palabra2 = scanner.nextLine();
 
-        int contador =0;
 
-        for (int i = 0; i < frase1.length(); i++) {
-            for (int j = 0; i < frase2.length(); i++) {
-                if (frase1.strip() == frase2.strip()) {
-                    contador++;
+        int longitud1 = palabra1.length();
+        int longitud2 = palabra2.length();
 
-                }
-            }
+        if (longitud1 > longitud2) {
+            int diferencia = longitud1 - longitud2;
+            System.out.println("La primera palabra (" + palabra1 + ") es más larga por " + diferencia + " letras.");
+        } else if (longitud2 > longitud1) {
+            int diferencia = longitud2 - longitud1;
+            System.out.println("La segunda palabra (" + palabra2 + ") es más larga por " + diferencia + " letras.");
+        } else {
+            System.out.println("Ambas palabras tienen la misma longitud.");
         }
-        System.out.printf("La letra mas pequeña es '%s'.%n", frase1, contador, frase2);
 
-        for (int i = 0; i < frase2.length(); i++) {
-            for (int j = 0; i < frase1.length(); i++) {
-                if (frase1.strip() == frase2.strip()) {
-                    contador++;
-
-                }
-            }
-        }
-        System.out.printf("La letra mas pequeña es '%s'.%n", frase2, contador, frase1);
     }
 }
