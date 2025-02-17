@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Bucles/Bucles.iml" filepath="$PROJECT_DIR$/Bucles/Bucles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Caja_Popular/Caja_Popular.iml" filepath="$PROJECT_DIR$/Caja_Popular/Caja_Popular.iml" />
       <module fileurl="file://$PROJECT_DIR$/Condicionale/Condicionale.iml" filepath="$PROJECT_DIR$/Condicionale/Condicionale.iml" />
       <module fileurl="file://$PROJECT_DIR$/Condicionales/Condicionales.iml" filepath="$PROJECT_DIR$/Condicionales/Condicionales.iml" />
       <module fileurl="file://$PROJECT_DIR$/Examen1p/Examen1p.iml" filepath="$PROJECT_DIR$/Examen1p/Examen1p.iml" />
