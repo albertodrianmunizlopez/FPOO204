@@ -2,10 +2,50 @@ import javax.swing.*;
 
 public class Opciones {
 
-    String titular;
-    int edad;
-    double saldo = 0;
-    String noCuenta;
+    private String titular;
+    private int edad;
+    private double saldo = 0;
+    private String noCuenta;
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getNoCuenta() {
+        return noCuenta;
+    }
+
+    public void setNoCuenta(String noCuenta) {
+        this.noCuenta = noCuenta;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+    public String getTitular() {
+        return titular;
+    }
+
+    public void setTitular(String titular) {
+        this.titular = titular;
+    }
+
+
+    public Opciones(int edad, String noCuenta, double saldo, String titular) {
+        this.edad = edad;
+        this.noCuenta = noCuenta;
+        this.saldo = saldo;
+        this.titular = titular;
+    }
 
     public Opciones(String noCuenta, String titular, int edad, double saldo) {
         String cuentaNoCuenta = noCuenta;

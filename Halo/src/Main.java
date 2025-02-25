@@ -20,7 +20,7 @@ public class Main {
         reach.recargarArma(10);
         reach.correr(false);
 
-        //ejemplo de Get & Set con elobjeto jefe maestro
+        //ejemplo de Get & Set con el objeto jefe maestro
         jefeMaestro.setNombre("Alberto");
         jefeMaestro.mostrarInfo();
         System.out.println(jefeMaestro.getNombre());
