@@ -6,34 +6,70 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        //Registrar vehiculo 2Registrar conductor 3Asignarconductor a vehiculo 4registrar envio
-        //5Registrar Entrega 6Actualizar Estado de Entrega 7Mostra info 8Salir
+        while (true) {
+            String opcionStr = JOptionPane.showInputDialog("Selecciona una opción:\n" +
+                    "1. Crear Vehículo\n" +
+                    "2. Crear Conductor\n" +
+                    "3. Crear Envío\n" +
+                    "4. Crear Entrega\n" +
+                    "5. Salir");
+            int opcion = Integer.parseInt(opcionStr);
 
-        Scanner scanner = new Scanner(System.in);
-        int op;
-        op= scanner.nextInt();
+            switch (opcion) {
+                case 1:
 
-        switch(op){
-            case 1:
+                    Vehiculo vehiculo1 = new Vehiculo();
+                    vehiculo1.mostrarInformacion();
+                    break;
 
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            case 4:
-                break;
-            case 5:
-                break;
-            case 6:
-                break;
-            case 7:
-                break;
+                case 2:
 
-            default:
-                System.out.println("No hay de esa ");
+                    String nombre = JOptionPane.showInputDialog("Ingrese el nombre del conductor:");
+                    String identificacion = JOptionPane.showInputDialog("Ingrese la identificación:");
+                    String licencia = JOptionPane.showInputDialog("Ingrese el tipo de licencia:");
+
+                    Conductor conductor1 = new Conductor(nombre, identificacion, licencia);
+                    conductor1.mostrarInformacion();
+                    break;
+
+                case 3:
+
+                    Envio envio = Envio.crearEnvio();
+
+                    // Mostrar los datos del envío
+                    JOptionPane.showMessageDialog(null, "Codigo de Envío: " + envio.getCodigoEnvio() +
+                            "\nDestino: " + envio.getDestino() +
+                            "\nPeso: " + envio.getPeso());
+                    break;
+
+                case 4:
+
+                    String numeroGuiaStr = JOptionPane.showInputDialog("Introduce el numero de guia:");
+                    int numeroGuia = Integer.parseInt(numeroGuiaStr);
+                    Entrega entrega = new Entrega(numeroGuia);
+
+
+                    JOptionPane.showMessageDialog(null, "Numero de Guia: " + entrega.getNumeroGuia() +
+                            "\nEstado: " + entrega.getEstado());
+
+
+                    entrega.actualizarEstado();
+
+                    JOptionPane.showMessageDialog(null, "Numero de Guia: " + entrega.getNumeroGuia() +
+                            "\nEstado Actualizado: " + entrega.getEstado());
+                    break;
+
+                case 5:
+
+                    JOptionPane.showMessageDialog(null, "Saliendo");
+                    System.exit(0);
+                    break;
+
+                default:
+                    JOptionPane.showMessageDialog(null, "Opcion no válida.");
+                    break;
+            }
         }
-
 
     }
 }

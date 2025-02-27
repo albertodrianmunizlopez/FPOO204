@@ -2,10 +2,27 @@ import javax.swing.JOptionPane;
 
 public class Vehiculo {
 
-    
+
     private int placa;
     private String modelo;
-    private int CapacidadCarga;
+    private int capacidadCarga;
+
+
+    public Vehiculo() {
+        this.modelo = JOptionPane.showInputDialog("Ingrese el modelo del vehículo:");
+
+        this.capacidadCarga = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la capacidad de carga:"));
+
+        this.placa = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la placa del vehículo:"));
+    }
+
+
+    public Vehiculo(String modelo, int capacidadCarga, int placa) {
+        this.modelo = modelo;
+        this.capacidadCarga = capacidadCarga;
+        this.placa = placa;
+    }
+
 
     public int getPlaca() {
         return placa;
@@ -24,18 +41,18 @@ public class Vehiculo {
     }
 
     public int getCapacidadCarga() {
-        return CapacidadCarga;
+        return capacidadCarga;
     }
 
     public void setCapacidadCarga(int capacidadCarga) {
-        CapacidadCarga = capacidadCarga;
+        this.capacidadCarga = capacidadCarga;
     }
 
-    public Vehiculo(String modelo, int capacidadCarga, int placa) {
-        this.modelo = modelo;
-        this.CapacidadCarga = capacidadCarga;
-        this.placa = placa;
-    }
 
+    public void mostrarInformacion() {
+        JOptionPane.showMessageDialog(null, "Modelo: " + modelo +
+                "\nCapacidad de Carga: " + capacidadCarga +
+                "\nPlaca: " + placa);
+    }
 
 }
