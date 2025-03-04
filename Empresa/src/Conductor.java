@@ -23,7 +23,7 @@ public class Conductor {
     }
 
     public String getLicencia() {
-        return licenc
+        return licencia;
     }
 
 
