@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/Halo/Halo.iml" filepath="$PROJECT_DIR$/Halo/Halo.iml" />
       <module fileurl="file://$PROJECT_DIR$/HaloHerencia/HaloHerencia.iml" filepath="$PROJECT_DIR$/HaloHerencia/HaloHerencia.iml" />
       <module fileurl="file://$PROJECT_DIR$/Merc/Merc.iml" filepath="$PROJECT_DIR$/Merc/Merc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TranyLog/TranyLog.iml" filepath="$PROJECT_DIR$/TranyLog/TranyLog.iml" />
       <module fileurl="file://$PROJECT_DIR$/password/password.iml" filepath="$PROJECT_DIR$/password/password.iml" />
     </modules>
   </component>
