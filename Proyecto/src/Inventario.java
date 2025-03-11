@@ -1,21 +1,33 @@
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 public class Inventario {
 
-    private Articulo  articulo;
+    public static void mostrarInventario() {
+        JFrame frame = new JFrame("Inventario");
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setSize(400, 300);
 
-    public void agregarArticulo(String nombre, int cantidad) {
-        articulo = new Articulo(nombre, cantidad);
-        JOptionPane.showMessageDialog(null, "Artículo agregado con éxito.");
+        JPanel panel = new JPanel();
+        frame.add(panel);
+        placeComponents(panel);
+
+        frame.setVisible(true);
     }
 
-    public void consultarStock() {
-        if (articulo != null) {
-            String mensaje = "Stock de artículos:\n" + articulo.getNombre() + ": " + articulo.getCantidadDisponible();
-            JOptionPane.showMessageDialog(null, mensaje);
-        } else {
-            JOptionPane.showMessageDialog(null, "No hay artículos en el inventario.");
-        }
-    }
+    private static void placeComponents(JPanel panel) {
+        panel.setLayout(null);
 
+        JLabel inventarioLabel = new JLabel("Consultar Inventario:");
+        inventarioLabel.setBounds(10, 20, 150, 25);
+        panel.add(inventarioLabel);
+
+        JTextField inventarioText = new JTextField(20);
+        inventarioText.setBounds(160, 20, 165, 25);
+        panel.add(inventarioText);
+
+        JButton consultarButton = new JButton("Consultar");
+        consultarButton.setBounds(10, 50, 150, 25);
+        panel.add(consultarButton);
+
+    }
 }
