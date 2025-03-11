@@ -6,6 +6,9 @@ public class Main {
 
         Inventario inventario = new Inventario();
 
+        String usuarioa = "kecin";
+        int Contra1 = Integer.parseInt("12345");
+
         String usuario = JOptionPane.showInputDialog("Ingrese usuario:");
         String contrasena = JOptionPane.showInputDialog("Ingrese contraseña:");
         String departamento = JOptionPane.showInputDialog("Ingrese departamento:");
