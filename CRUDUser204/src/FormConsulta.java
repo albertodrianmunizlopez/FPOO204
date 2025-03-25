@@ -44,7 +44,7 @@ public class FormConsulta extends javax.swing.JFrame {
         btnBuscar = new javax.swing.JButton();
         btnTodos = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setText("Consulta de Usuarios");
 
@@ -123,6 +123,20 @@ public class FormConsulta extends javax.swing.JFrame {
 
     private void btnTodosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTodosActionPerformed
         // TODO add your handling code here:
+        
+        ResultSet todos = crud.obtenerTodos();
+        DefaultTableModel modeloT = (DefaultTableModel) jTable1.getModel();
+        modeloT.setRowCount(0);
+        
+        try{
+          while(todos.next()){
+              modeloT.addRow(new Object[]{todos.getInt("idusuarios"), todos.getString("Nombre"),todos.getString("Correo"),todos.getString("Contrasena")});
+          }  
+        }
+        catch(SQLException x){
+            System.out.println("Error al llenar la tabla "+x.getMessage());
+        }
+                
     }//GEN-LAST:event_btnTodosActionPerformed
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed

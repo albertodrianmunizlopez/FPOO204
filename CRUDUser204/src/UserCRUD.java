@@ -44,7 +44,7 @@ public class UserCRUD {
     
     //Metodo para Consultar por ID
     public ResultSet buscarPorID(int id){
-        String sqlBuscar="SELECT * FROM usuarios WHERE ID= ?";
+        String sqlBuscar="SELECT * FROM usuarios WHERE idusuarios= ?";
         
         try{
             PreparedStatement ps = conexion.prepareStatement(sqlBuscar);
@@ -58,6 +58,19 @@ public class UserCRUD {
         }
     }   //fin del consulta ID
   
+    public ResultSet obtenerTodos(){
+        
+        String sqlTodos="SELECT * FROM usuarios";
+        
+        try{
+            PreparedStatement ps= conexion.prepareStatement(sqlTodos);
+            return ps.executeQuery();
+        }
+        catch(SQLException s){
+            System.out.println("Error al consultar todos"+s.getMessage());
+            return null;
+        }
+        
+    }//fin de obtener ttodos
     
-
 }
