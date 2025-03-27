@@ -43,6 +43,12 @@ public class UserCRUD {
     }           //fin del insert 
     
     //Metodo para Consultar por ID
+
+    /**
+     *
+     * @param id
+     * @return
+     */
     public ResultSet buscarPorID(int id){
         String sqlBuscar="SELECT * FROM usuarios WHERE idusuarios= ?";
         
@@ -72,5 +78,16 @@ public class UserCRUD {
         }
         
     }//fin de obtener ttodos
+    
+   public ResultSet buscarPorId(int idusuarios) {
+    String sql = "SELECT * FROM usuarios WHERE idusuarios = ?";
+    try (PreparedStatement ps = conexion.prepareStatement(sql)) {
+        ps.setInt(1, idusuarios);
+        return ps.executeQuery();
+    } catch (SQLException e) {
+        System.out.println("Error al buscar usuario: " + e.getMessage());
+        return null;
+    }
+}
     
 }

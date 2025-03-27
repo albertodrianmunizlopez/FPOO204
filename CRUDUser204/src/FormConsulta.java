@@ -122,7 +122,7 @@ public class FormConsulta extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnTodosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTodosActionPerformed
-        // TODO add your handling code here:
+         // TODO add your handling code here:
         
         ResultSet todos = crud.obtenerTodos();
         DefaultTableModel modeloT = (DefaultTableModel) jTable1.getModel();
